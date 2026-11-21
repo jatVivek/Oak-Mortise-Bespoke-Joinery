@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oak &amp; Mortise Bespoke Joinery | Handcrafted Fitted Furniture UK</title>
+  <meta name="description" content="Bespoke fitted wardrobes, acoustic oak media walls, alcove cabinetry and architectural joinery crafted in our workshop and scribed millimetre-tight to your home." />
+
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            charcoal: 'var(--primary-dark)',
+            gold: 'var(--accent-gold)',
+            alabaster: 'var(--surface-light)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    :root {
+      --primary-dark: #14171A;
+      --accent-gold: #C69C6D;
+      --accent-gold-soft: rgba(198, 156, 109, 0.14);
+      --surface-light: #F8F6F2;
+      --border-hairline: rgba(20, 23, 26, 0.12);
+    }
+
+    body {
+      background-color: var(--surface-light);
+      color: var(--primary-dark);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Subtle architectural drafting grid background */
+    .arch-grid {
+      background-image:
+        linear-gradient(to right, rgba(20, 23, 26, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(20, 23, 26, 0.035) 1px, transparent 1px);
+      background-size: 36px 36px;
+    }
+
+    .arch-grid-dark {
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 36px 36px;
+    }
+
+    /* Hide scrollbar for horizontal mobile filter pills */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Dynamic theme utility bindings */
+    .bg-brand-dark { background-color: var(--primary-dark); }
+    .text-brand-dark { color: var(--primary-dark); }
+    .border-brand-dark { border-color: var(--primary-dark); }
+
+    .bg-brand-accent { background-color: var(--accent-gold); }
+    .text-brand-accent { color: var(--accent-gold); }
+    .border-brand-accent { border-color: var(--accent-gold); }
+
+    .bg-brand-surface { background-color: var(--surface-light); }
+
+    /* Custom subtle woodgrain / elevation card */
+    .joinery-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(20, 23, 26, 0.1);
+      transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .joinery-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 38px -14px rgba(20, 23, 26, 0.14);
+      border-color: var(--accent-gold);
+    }
+
+    /* Quote slip paper perforations / blueprint edge */
+    .spec-sheet {
+      background: #FFFFFF;
+      border: 1px solid rgba(20, 23, 26, 0.14);
+      box-shadow: 0 20px 45px -15px rgba(20, 23, 26, 0.12);
+    }
+
+    /* Accessible touch target minimum */
+    .touch-btn {
+      min-height: 44px;
+    }
+  </style>
+</head>
+<body class="bg-brand-surface text-brand-dark pb-20 md:pb-0">
+
+  <!-- TOP ARCHITECTURAL TRUST & CONTACT BAR -->
+  <div class="bg-brand-dark text-white/85 text-xs border-b border-white/10">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 py-2 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-4">
+        <span class="inline-flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+          <span data-brand="serviceAreas">London, Surrey, Kent &amp; Home Counties</span>
+        </span>
+        <span class="hidden sm:inline text-white/30">|</span>
+        <span class="hidden sm:inline-flex items-center gap-1.5 text-white/80">
+          <svg class="w-3.5 h-3.5 text-brand-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          <span data-brand="guaranteeText">10-Year Structural Craftsmanship Guarantee</span>
+        </span>
+      </div>
+      <div class="flex items-center gap-4 ml-auto">
+        <a id="top-phone-link" href="https://wa.me/447700900412" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 font-medium text-white hover:text-brand-accent transition">
+          <svg class="w-3.5 h-3.5 text-brand-accent" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+          <span data-brand="formattedPhone">+44 7700 900412</span>
+        </a>
+        <span class="hidden md:inline text-white/30">|</span>
+        <a id="top-email-link" href="mailto:enquiries@oakandmortise.co.uk" class="hidden md:inline text-white/75 hover:text-white transition" data-brand="email">enquiries@oakandmortise.co.uk</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-brand-surface/95 backdrop-blur-md border-b border-black/10">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 h-18 py-3 flex items-center justify-between gap-4">
+      <!-- Brand Identity -->
+      <a href="#" class="flex items-center gap-3 group min-w-0">
+        <div id="header-logo-container" class="shrink-0"></div>
+        <div class="min-w-0">
+          <div class="font-serif font-bold text-lg sm:text-xl tracking-tight text-brand-dark leading-tight truncate" data-brand="companyName">
+            Oak &amp; Mortise Bespoke Joinery
+          </div>
+          <div class="text-[11px] uppercase tracking-[0.16em] text-black/55 font-medium truncate" data-brand="yearsExperience">
+            12+ Years Master Joinery
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-brand-dark/80">
+        <a href="#portfolio" class="hover:text-brand-dark transition py-2">Projects &amp; Pricing</a>
+        <a href="#craft-story" class="hover:text-brand-dark transition py-2">Our Craft &amp; Story</a>
+        <a href="#reviews" class="hover:text-brand-dark transition py-2">Client Reviews</a>
+        <a href="#quote-builder" class="hover:text-brand-dark transition py-2">Instant Quote</a>
+        <button type="button" onclick="openOwnerModal()" class="inline-flex items-center gap-1.5 text-black/65 hover:text-brand-dark transition py-2">
+          <svg class="w-3.5 h-3.5 text-brand-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          <span>Owner Desk</span>
+        </button>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="flex items-center gap-2.5 shrink-0">
+        <a id="header-whatsapp-badge" href="https://wa.me/447700900412" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg border border-black/15 bg-white hover:border-brand-accent text-xs font-semibold text-brand-dark transition touch-btn">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span data-brand="formattedPhone">+44 7700 900412</span>
+        </a>
+        <a href="#quote-builder" class="inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-brand-dark text-white text-xs sm:text-sm font-semibold hover:opacity-90 transition shadow-sm touch-btn">
+          Get Instant Quote
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- EDITORIAL SPLIT-SCREEN HERO SECTION -->
+  <section class="relative arch-grid border-b border-black/10 overflow-hidden">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 py-10 sm:py-14 lg:py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+        <!-- Left Editorial Column -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-black/10 shadow-2xs text-xs font-semibold tracking-wide text-brand-dark">
+            <span class="w-2 h-2 rounded-full bg-brand-accent"></span>
+            <span>Bespoke Workshop Joinery &bull; Made-to-Measure UK</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-[3.55rem] font-bold tracking-tight text-brand-dark leading-[1.08]" data-brand="tagline">
+            Handcrafted Fitted Wardrobes, Media Walls &amp; Architectural Joinery
+          </h1>
+
+          <p class="text-base sm:text-lg text-black/70 leading-relaxed max-w-2xl">
+            Built from scratch in our joinery workshop and scribed millimetre-tight to period or modern walls. No flat-pack boxes, no cheap filler strips—just architectural cabinetry finished to last decades.
+          </p>
+
+          <!-- Primary & WhatsApp CTAs -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-1">
+            <a href="#quote-builder" class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-brand-dark text-white font-semibold text-sm sm:text-base hover:opacity-95 transition shadow-md touch-btn">
+              <span>Build Instant Guide Quote</span>
+              <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a id="hero-whatsapp-cta" href="https://wa.me/447700900412" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-white border border-black/15 text-brand-dark font-semibold text-sm sm:text-base hover:border-brand-accent transition touch-btn">
+              <svg class="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+              <span>WhatsApp Workshop Direct</span>
+            </a>
+          </div>
+
+          <!-- Trust Metrics Strip -->
+          <div class="grid grid-cols-3 gap-3 sm:gap-6 pt-4 border-t border-black/10">
+            <div>
+              <div class="font-serif text-xl sm:text-2xl font-bold text-brand-dark">10-Year</div>
+              <div class="text-xs text-black/60">Structural Guarantee</div>
+            </div>
+            <div>
+              <div class="font-serif text-xl sm:text-2xl font-bold text-brand-dark">Blum&reg; UK</div>
+              <div class="text-xs text-black/60">Soft-Close Hardware</div>
+            </div>
+            <div>
+              <div class="font-serif text-xl sm:text-2xl font-bold text-brand-dark">1–2 Days</div>
+              <div class="text-xs text-black/60">Clean Dust-Free Fit</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Interactive Featured Joinery Showcase Card -->
+        <div class="lg:col-span-5">
+          <div class="bg-white rounded-2xl border border-black/12 shadow-xl overflow-hidden">
+            <!-- Top Showcase Switcher Tabs -->
+            <div class="bg-brand-dark px-4 py-3 flex items-center justify-between gap-2 border-b border-white/10">
+              <span class="text-[11px] uppercase tracking-[0.15em] text-white/70 font-semibold">Workshop Spec Preview</span>
+              <div class="flex items-center gap-1.5" id="hero-showcase-tabs">
+                <button type="button" onclick="selectHeroShowcase(0)" class="hero-tab px-2.5 py-1 rounded text-xs font-semibold bg-brand-accent text-brand-dark transition">Wardrobes</button>
+                <button type="button" onclick="selectHeroShowcase(1)" class="hero-tab px-2.5 py-1 rounded text-xs font-semibold text-white/75 hover:text-white transition">Media Wall</button>
+                <button type="button" onclick="selectHeroShowcase(2)" class="hero-tab px-2.5 py-1 rounded text-xs font-semibold text-white/75 hover:text-white transition">Alcoves</button>
+              </div>
+            </div>
+
+            <!-- Architectural SVG Elevation Illustration -->
+            <div id="hero-showcase-svg" class="bg-[#F2EFE9] p-5 border-b border-black/10 flex items-center justify-center">
+              <!-- Populated dynamically via JS -->
+            </div>
+
+            <!-- Showcase Details & Guide Price -->
+            <div class="p-5 sm:p-6 space-y-4">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <span id="hero-showcase-tag" class="text-[11px] font-bold uppercase tracking-wider text-brand-accent">Most Requested</span>
+                  <h2 id="hero-showcase-title" class="font-serif text-2xl font-bold text-brand-dark leading-tight mt-0.5">
+                    Floor-to-Ceiling Shaker Wardrobes
+                  </h2>
+                </div>
+                <div class="text-right shrink-0">
+                  <div class="text-[11px] text-black/55 uppercase font-semibold">Guide From</div>
+                  <div id="hero-showcase-price" class="font-serif text-2xl font-bold text-brand-dark">£2,450</div>
+                </div>
+              </div>
+
+              <p id="hero-showcase-spec" class="text-xs sm:text-sm text-black/65 leading-relaxed">
+                18mm moisture-resistant MDF &amp; oak interiors, scribed cornice &amp; plinth, Blum soft-close hinges, workshop colour-matched spray finish.
+              </p>
+
+              <div class="flex items-center justify-between pt-2 border-t border-black/10 gap-3">
+                <span id="hero-showcase-lead" class="text-xs font-medium text-black/60">Lead time: 3–4 wks workshop</span>
+                <button id="hero-showcase-cta" type="button" onclick="quoteSimilarFromHero()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-brand-dark text-white text-xs font-semibold hover:opacity-90 transition touch-btn">
+                  <span>Price This Build</span>
+                  <svg class="w-3.5 h-3.5 text-brand-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE PORTFOLIO & GUIDE PRICE EXPLORER -->
+  <section id="portfolio" class="py-14 sm:py-20 border-b border-black/10">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-[0.18em] text-brand-accent">Commissioned Work &amp; Transparent Pricing</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark mt-1.5">
+            Bespoke Joinery &amp; Guide Prices
+          </h2>
+        </div>
+        <p class="text-sm text-black/65 max-w-md">
+          Every commission is built to order. Explore typical UK specifications and starting guide prices in GBP, or tap any project to pre-load its specification into our quote builder.
+        </p>
+      </div>
+
+      <!-- Filter Pills (Horizontally swipeable on mobile) -->
+      <div id="portfolio-filters" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-3 mb-8">
+        <!-- Populated dynamically via JS -->
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+        <!-- Populated dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND STORY & CRAFTSMANSHIP PILLARS -->
+  <section id="craft-story" class="py-14 sm:py-20 bg-brand-dark text-white arch-grid-dark border-b border-white/10">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+
+        <!-- Left Brand Story -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold text-brand-accent">
+            <span>The Workshop Standard</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] font-bold leading-[1.12] text-white" data-brand="brandStoryTitle">
+            Why We Build From Scratch — Never Flat-Pack
+          </h2>
+
+          <p class="text-white/75 text-base sm:text-lg leading-relaxed" data-brand="brandStoryBody">
+            Founded by workshop-trained cabinetmakers, we saw too many UK homeowners paying premium prices for mass-produced carcasses trimmed with filler strips. Every wardrobe, alcove unit, and media wall we build is scribed millimetre-tight to wonky period walls, spray-finished in our workshop, and installed cleanly with dust-extraction on site—leaving clients with furniture that looks like it was always part of the house.
+          </p>
+
+          <div class="pt-2 flex flex-wrap items-center gap-4 text-xs sm:text-sm text-white/80">
+            <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-3.5 py-2 rounded-lg">
+              <span class="w-2 h-2 rounded-full bg-brand-accent"></span>
+              <span>FSC&reg; Certified Sustainable Timbers</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-3.5 py-2 rounded-lg">
+              <span class="w-2 h-2 rounded-full bg-brand-accent"></span>
+              <span>Full Public Liability Insured</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 3 Craftsmanship Pillars -->
+        <div id="brand-pillars-container" class="lg:col-span-6 space-y-4">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- VERIFIED UK HOMEOWNER REVIEWS -->
+  <section id="reviews" class="py-14 sm:py-20 border-b border-black/10">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-[0.18em] text-brand-accent">Homeowner Feedback</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mt-1">
+            Trusted Across Period &amp; Modern UK Homes
+          </h2>
+        </div>
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-black/10 text-xs font-semibold">
+          <span class="text-amber-500 text-sm tracking-tight">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span>5.0 Average Client Rating</span>
+        </div>
+      </div>
+
+      <div id="reviews-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Populated dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SMART BESPOKE CARPENTRY QUOTE & HOME-MEASURE BUILDER -->
+  <section id="quote-builder" class="py-14 sm:py-20 arch-grid">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div class="max-w-2xl mb-10">
+        <span class="text-xs font-bold uppercase tracking-[0.18em] text-brand-accent">60-Second Estimator &amp; Survey Booking</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark mt-1.5">
+          Instant Bespoke Carpentry Quote
+        </h2>
+        <p class="text-sm sm:text-base text-black/65 mt-2">
+          Configure your joinery project below for an immediate guide price range in £ GBP, then send your specification directly to our workshop on WhatsApp or save it for a home measure survey.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+        <!-- LEFT COLUMN: 4-STEP INTERACTIVE BUILDER -->
+        <div class="lg:col-span-7 bg-white rounded-2xl border border-black/12 p-5 sm:p-8 shadow-sm space-y-8">
+
+          <!-- STEP 1: PROJECT TYPE -->
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <label class="text-xs font-bold uppercase tracking-wider text-brand-dark flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-brand-dark text-white inline-flex items-center justify-center text-[11px]">1</span>
+                <span>Select Joinery Project Type</span>
+              </label>
+            </div>
+            <div id="qb-project-types" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <!-- Populated via JS -->
+            </div>
+          </div>
+
+          <!-- STEP 2: APPROXIMATE WIDTH / SCOPE -->
+          <div class="pt-6 border-t border-black/10">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <label class="text-xs font-bold uppercase tracking-wider text-brand-dark flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-brand-dark text-white inline-flex items-center justify-center text-[11px]">2</span>
+                <span>Approximate Width / Scope</span>
+              </label>
+              <span class="text-xs font-semibold text-brand-accent">Updates £ guide live</span>
+            </div>
+            <div id="qb-widths" class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+              <!-- Populated via JS -->
+            </div>
+          </div>
+
+          <!-- STEP 3: MATERIAL & FINISH -->
+          <div class="pt-6 border-t border-black/10">
+            <label class="text-xs font-bold uppercase tracking-wider text-brand-dark flex items-center gap-2 mb-3">
+              <span class="w-6 h-6 rounded-full bg-brand-dark text-white inline-flex items-center justify-center text-[11px]">3</span>
+              <span>Material &amp; Workshop Finish</span>
+            </label>
+            <div id="qb-finishes" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <!-- Populated via JS -->
+            </div>
+          </div>
+
+          <!-- STEP 4: CUSTOMER & SITE DETAILS -->
+          <div class="pt-6 border-t border-black/10 space-y-4">
+            <label class="text-xs font-bold uppercase tracking-wider text-brand-dark flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-brand-dark text-white inline-flex items-center justify-center text-[11px]">4</span>
+              <span>Site &amp; Home-Measure Details</span>
+            </label>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="qb-name" class="block text-xs font-semibold text-black/75 mb-1.5">Full Name *</label>
+                <input id="qb-name" type="text" placeholder="e.g. Sarah Jenkins" oninput="updateQuoteState()" class="w-full px-3.5 py-2.5 rounded-xl border border-black/15 bg-brand-surface/50 text-sm focus:outline-none focus:border-brand-dark touch-btn" />
+              </div>
+              <div>
+                <label for="qb-postcode" class="block text-xs font-semibold text-black/75 mb-1.5">UK Postcode *</label>
+                <input id="qb-postcode" type="text" placeholder="e.g. SE9 4AB" oninput="updateQuoteState()" class="w-full px-3.5 py-2.5 rounded-xl border border-black/15 bg-brand-surface/50 text-sm uppercase focus:outline-none focus:border-brand-dark touch-btn" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="qb-property" class="block text-xs font-semibold text-black/75 mb-1.5">Property Era / Type</label>
+                <select id="qb-property" onchange="updateQuoteState()" class="w-full px-3.5 py-2.5 rounded-xl border border-black/15 bg-brand-surface/50 text-sm focus:outline-none focus:border-brand-dark touch-btn">
+                  <option value="Period / Victorian / Edwardian">Period / Victorian / Edwardian</option>
+                  <option value="1930s–1980s Suburban">1930s–1980s Suburban</option>
+                  <option value="Modern New-Build / Apartment">Modern New-Build / Apartment</option>
+                </select>
+              </div>
+              <div>
+                <label for="qb-survey" class="block text-xs font-semibold text-black/75 mb-1.5">Preferred Survey Window</label>
+                <select id="qb-survey" onchange="updateQuoteState()" class="w-full px-3.5 py-2.5 rounded-xl border border-black/15 bg-brand-surface/50 text-sm focus:outline-none focus:border-brand-dark touch-btn">
+                  <option value="Weekday Morning (9am–12pm)">Weekday Morning (9am–12pm)</option>
+                  <option value="Weekday Evening (5pm–7:30pm)">Weekday Evening (5pm–7:30pm)</option>
+                  <option value="Saturday Morning / Afternoon">Saturday Morning / Afternoon</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="qb-notes" class="block text-xs font-semibold text-black/75 mb-1.5">Room Notes, Ceiling Height or Reference Photos</label>
+              <textarea id="qb-notes" rows="2" placeholder="e.g. Chimneypiece alcoves 2.7m high, looking for shaker doors + internal drawers. Happy to send wall photos on WhatsApp." oninput="updateQuoteState()" class="w-full px-3.5 py-2.5 rounded-xl border border-black/15 bg-brand-surface/50 text-sm focus:outline-none focus:border-brand-dark"></textarea>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: STICKY LIVE QUOTE SLIP PREVIEW -->
+        <div class="lg:col-span-5 lg:sticky lg:top-24">
+          <div class="spec-sheet rounded-2xl overflow-hidden">
+            <!-- Header Strip -->
+            <div class="bg-brand-dark text-white px-5 py-4 flex items-center justify-between">
+              <div>
+                <div class="text-[11px] uppercase tracking-[0.16em] text-brand-accent font-bold">Live Workshop Specification</div>
+                <div class="font-serif text-xl font-bold mt-0.5" data-brand="companyName">Oak &amp; Mortise Bespoke Joinery</div>
+              </div>
+              <div class="text-right">
+                <span id="slip-ref-id" class="inline-block px-2.5 py-1 rounded bg-white/10 font-mono text-xs text-white/90">#OM-4821</span>
+              </div>
+            </div>
+
+            <!-- Live Price Banner -->
+            <div class="bg-[#F3EFE8] px-5 py-4 border-b border-black/10 flex items-center justify-between gap-4">
+              <div>
+                <div class="text-xs font-semibold text-black/60">Estimated Guide Bracket</div>
+                <div id="slip-price-range" class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark tracking-tight mt-0.5">
+                  £2,650 – £3,300
+                </div>
+              </div>
+              <div class="text-right text-[11px] text-black/60 max-w-[130px] leading-snug">
+                Includes workshop build, hardware &amp; UK installation
+              </div>
+            </div>
+
+            <!-- Itemized Breakdown -->
+            <div class="p-5 space-y-3 text-sm">
+              <div class="flex justify-between gap-3 py-1.5 border-b border-black/8">
+                <span class="text-black/55">Project</span>
+                <span id="slip-project" class="font-semibold text-right text-brand-dark">Fitted Wardrobes (Hinged / Sliding)</span>
+              </div>
+              <div class="flex justify-between gap-3 py-1.5 border-b border-black/8">
+                <span class="text-black/55">Approx. Width</span>
+                <span id="slip-width" class="font-semibold text-right text-brand-dark">1.5m – 2.5m</span>
+              </div>
+              <div class="flex justify-between gap-3 py-1.5 border-b border-black/8">
+                <span class="text-black/55">Finish Spec</span>
+                <span id="slip-finish" class="font-semibold text-right text-brand-dark">Workshop Spray Finish (Any Colour)</span>
+              </div>
+              <div class="flex justify-between gap-3 py-1.5 border-b border-black/8">
+                <span class="text-black/55">Client &amp; Postcode</span>
+                <span id="slip-client" class="font-semibold text-right text-brand-dark">Homeowner &bull; Postcode TBC</span>
+              </div>
+              <div class="flex justify-between gap-3 py-1.5 border-b border-black/8">
+                <span class="text-black/55">Property &amp; Survey</span>
+                <span id="slip-survey" class="font-semibold text-right text-brand-dark text-xs">Period / Victorian &bull; Weekday Morning</span>
+              </div>
+              <div id="slip-notes-row" class="hidden py-1.5 border-b border-black/8">
+                <div class="text-xs text-black/55 mb-0.5">Notes:</div>
+                <div id="slip-notes" class="text-xs text-brand-dark italic"></div>
+              </div>
+            </div>
+
+            <!-- Output Action Buttons -->
+            <div class="px-5 pb-5 space-y-2.5">
+              <button type="button" onclick="submitQuoteViaWhatsApp()" class="w-full inline-flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-xl bg-brand-dark text-white font-semibold text-sm hover:opacity-95 transition shadow-md touch-btn">
+                <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+                <span>Send Quote Request via WhatsApp</span>
+              </button>
+
+              <div class="grid grid-cols-2 gap-2.5">
+                <button type="button" onclick="copyQuoteSlip()" class="inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl border border-black/15 bg-white hover:border-brand-dark text-xs font-semibold text-brand-dark transition touch-btn">
+                  <svg class="w-4 h-4 text-black/60" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                  <span>Copy Quote Slip</span>
+                </button>
+                <button type="button" onclick="saveEnquiryOnly()" class="inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl border border-black/15 bg-brand-surface hover:border-brand-accent text-xs font-semibold text-brand-dark transition touch-btn">
+                  <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span>Log Survey Request</span>
+                </button>
+              </div>
+              <p class="text-[11px] text-center text-black/50 pt-1">
+                No obligation &bull; Free laser measure &amp; CAD elevation following initial guide approval.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-dark text-white/80 border-t border-white/10">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-white/10">
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div id="footer-logo-container"></div>
+            <div>
+              <div class="font-serif text-xl font-bold text-white" data-brand="companyName">Oak &amp; Mortise Bespoke Joinery</div>
+              <div class="text-xs text-brand-accent" data-brand="yearsExperience">12+ Years Master Joinery</div>
+            </div>
+          </div>
+          <p class="text-sm text-white/65 leading-relaxed max-w-sm">
+            Architectural fitted furniture, alcove cabinetry, slatted oak media walls, and bespoke kitchens crafted in our UK workshop.
+          </p>
+          <div class="inline-flex items-center gap-2 text-xs text-white/75 bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg">
+            <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <span data-brand="guaranteeText">10-Year Structural Craftsmanship Guarantee</span>
+          </div>
+        </div>
+
+        <div class="md:col-span-4 space-y-3">
+          <div class="text-xs font-bold uppercase tracking-wider text-brand-accent">Workshop &amp; Coverage</div>
+          <p class="text-sm text-white/80" data-brand="serviceAreas">London, Surrey, Kent &amp; Home Counties</p>
+          <div class="space-y-1.5 text-sm">
+            <div>
+              <a id="footer-phone-link" href="https://wa.me/447700900412" target="_blank" rel="noopener" class="text-white hover:text-brand-accent transition font-medium">
+                WhatsApp / Tel: <span data-brand="formattedPhone">+44 7700 900412</span>
+              </a>
+            </div>
+            <div>
+              <a id="footer-email-link" href="mailto:enquiries@oakandmortise.co.uk" class="text-white/70 hover:text-white transition" data-brand="email">
+                enquiries@oakandmortise.co.uk
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-3 space-y-3">
+          <div class="text-xs font-bold uppercase tracking-wider text-brand-accent">Quick Navigation</div>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li><a href="#portfolio" class="hover:text-white transition">Projects &amp; Guide Prices</a></li>
+            <li><a href="#craft-story" class="hover:text-white transition">Our Workshop Process</a></li>
+            <li><a href="#reviews" class="hover:text-white transition">Verified Client Reviews</a></li>
+            <li><a href="#quote-builder" class="hover:text-white transition">Instant £ Quote Builder</a></li>
+            <li>
+              <button type="button" onclick="openOwnerModal()" class="inline-flex items-center gap-1.5 text-brand-accent hover:underline font-medium">
+                <span>Owner Desk &amp; Brand Cloner</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/50">
+        <div>&copy; <span id="current-year"></span> <span data-brand="companyName">Oak &amp; Mortise Bespoke Joinery</span>. All rights reserved.</div>
+        <div>Built for UK Master Carpenters &amp; Joiners</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- STICKY BOTTOM MOBILE QUICK-ACTION BAR (< 768px) -->
+  <div class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-brand-dark/95 backdrop-blur-md border-t border-white/15 px-3 py-2">
+    <div class="grid grid-cols-3 gap-2">
+      <a href="#quote-builder" class="flex flex-col items-center justify-center py-1.5 px-2 rounded-lg bg-brand-accent text-brand-dark font-bold text-[11px] touch-btn">
+        <span>Instant Quote</span>
+      </a>
+      <a id="mobile-whatsapp-bar" href="https://wa.me/447700900412" target="_blank" rel="noopener" class="flex flex-col items-center justify-center py-1.5 px-2 rounded-lg bg-white/10 text-white font-semibold text-[11px] border border-white/15 touch-btn">
+        <span>WhatsApp Direct</span>
+      </a>
+      <button type="button" onclick="openOwnerModal()" class="flex flex-col items-center justify-center py-1.5 px-2 rounded-lg bg-white/5 text-white/85 font-semibold text-[11px] border border-white/10 touch-btn">
+        <span>Owner PIN</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- OWNER DESK MODAL (PIN GATE + ENQUIRY QUEUE + LIVE BRAND CLONER) -->
+  <div id="owner-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 backdrop-blur-xs p-3 sm:p-6 overflow-y-auto">
+    <div class="bg-white w-full max-w-3xl rounded-2xl border border-black/15 shadow-2xl overflow-hidden my-auto">
+
+      <!-- Modal Header -->
+      <div class="bg-brand-dark text-white px-5 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-brand-accent"></span>
+          <h3 class="font-serif text-xl font-bold">Workshop Owner Desk</h3>
+        </div>
+        <button type="button" onclick="closeOwnerModal()" class="p-2 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition" aria-label="Close Owner Desk">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- STEP A: PIN PAD SCREEN -->
+      <div id="owner-pin-screen" class="p-6 sm:p-8 max-w-sm mx-auto text-center space-y-5">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-brand-dark text-brand-accent mx-auto flex items-center justify-center mb-3">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          </div>
+          <h4 class="font-serif text-2xl font-bold text-brand-dark">Enter Workshop PIN</h4>
+          <p class="text-xs text-black/60 mt-1">Manage UK quote leads &amp; customize brand settings (Demo PIN: <span class="font-mono font-bold text-brand-dark">2468</span>)</p>
+        </div>
+
+        <!-- PIN Dots Display -->
+        <div class="flex items-center justify-center gap-3 py-2" id="pin-dots">
+          <span class="w-3.5 h-3.5 rounded-full border-2 border-brand-dark"></span>
+          <span class="w-3.5 h-3.5 rounded-full border-2 border-brand-dark"></span>
+          <span class="w-3.5 h-3.5 rounded-full border-2 border-brand-dark"></span>
+          <span class="w-3.5 h-3.5 rounded-full border-2 border-brand-dark"></span>
+        </div>
+        <div id="pin-error" class="text-xs font-semibold text-red-600 hidden">Incorrect PIN. Try 2468.</div>
+
+        <!-- Numeric Keypad -->
+        <div class="grid grid-cols-3 gap-2.5 max-w-[240px] mx-auto">
+          <button type="button" onclick="pressPinDigit('1')" class="py-3 rounded-xl border border-black/15 font-bold text-lg hover:bg-brand-surface transition touch-btn">1</button>
+          <button type="button" onclick="pressPinDigit('2')" class="py-3 rounded-xl border border-black/15 font-bold text-lg hover:bg-brand-surface transition touch-btn">2</button>
+          <button type="button" onclick="pressPinDigit('3')" class="py-3 rounded-xl border border-black/15 font-bold text-lg hover:bg-brand-surface transition touch-btn">3</button>
+          <button type="button" onclick="pressPinDigit('4')" class="py-3 rounded-xl border border-black/15 font-bold text-lg hover:bg-brand-surface transition touch-btn">4</button>
+          <button type="button" onclick="pressPinDigit('5')" class="py-3 rounded-xl border border-black/15 font-bold text-lg hover:bg-brand-surface transition touch-btn">5</button>
+          <button type="button" onclick="pressPinDigit('6')" class="py-3 rounded-xl border border-black/15 font-bold text-lg hover:bg-brand-surface transition touch-btn">6</button>
+          <button type="button" onclick="pressPinDigit('7')" class="py-3 rounded-xl border border-black/15 font-bold text-lg hover:bg-brand-surface transition touch-btn">7</button>
+          <button type="button" onclick="pressPinDigit('8')" class="py-3 rounded-xl border border-black/15 font-bold text-lg hover:bg-brand-surface transition touch-btn">8</button>
+          <button type="button" onclick="pressPinDigit('9')" class="py-3 rounded-xl border border-black/15 font-bold text-lg hover:bg-brand-surface transition touch-btn">9</button>
+          <button type="button" onclick="clearPin()" class="py-3 rounded-xl border border-black/15 text-xs font-semibold text-black/60 hover:bg-brand-surface transition touch-btn">Clear</button>
+          <button type="button" onclick="pressPinDigit('0')" class="py-3 rounded-xl border border-black/15 font-bold text-lg hover:bg-brand-surface transition touch-btn">0</button>
+          <button type="button" onclick="submitPin()" class="py-3 rounded-xl bg-brand-dark text-white text-xs font-bold hover:opacity-90 transition touch-btn">Unlock</button>
+        </div>
+      </div>
+
+      <!-- STEP B: UNLOCKED OWNER DASHBOARD -->
+      <div id="owner-dashboard" class="hidden">
+        <!-- Tabs Navigation -->
+        <div class="flex items-center justify-between border-b border-black/10 px-5 bg-brand-surface">
+          <div class="flex items-center gap-2">
+            <button type="button" id="owner-tab-btn-enquiries" onclick="switchOwnerTab('enquiries')" class="px-4 py-3.5 text-xs sm:text-sm font-bold border-b-2 border-brand-dark text-brand-dark">
+              Enquiry Queue (<span id="enquiry-count-badge">0</span>)
+            </button>
+            <button type="button" id="owner-tab-btn-cloner" onclick="switchOwnerTab('cloner')" class="px-4 py-3.5 text-xs sm:text-sm font-bold border-b-2 border-transparent text-black/55 hover:text-brand-dark">
+              Quick-Brand Customizer (Clone Mode)
+            </button>
+          </div>
+          <button type="button" onclick="lockOwnerDesk()" class="text-xs font-semibold text-black/55 hover:text-brand-dark py-2">Lock</button>
+        </div>
+
+        <!-- TAB A: ENQUIRY QUEUE -->
+        <div id="owner-tab-enquiries" class="p-5 sm:p-6 max-h-[70vh] overflow-y-auto space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <p class="text-xs text-black/65">All quote requests submitted via the site are stored locally in your browser.</p>
+            <button type="button" onclick="seedDemoEnquiries(true)" class="text-xs font-semibold text-brand-accent hover:underline">Restore Sample UK Leads</button>
+          </div>
+          <div id="owner-enquiries-list" class="space-y-3.5">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+        <!-- TAB B: QUICK-BRAND CUSTOMIZER (CLONE MODE) -->
+        <div id="owner-tab-cloner" class="hidden p-5 sm:p-6 max-h-[70vh] overflow-y-auto space-y-5">
+          <div class="bg-[#F3EFE8] border border-black/10 rounded-xl p-3.5 text-xs text-black/75">
+            <strong>60-Second White-Label Cloner:</strong> Customise the company name, monogram or logo URL, WhatsApp number, service area, accent colour, and story below. Changes apply live and persist in <code class="font-mono">localStorage</code>.
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-black/75 mb-1">Company Name</label>
+              <input id="cfg-companyName" type="text" class="w-full px-3 py-2 rounded-lg border border-black/15 text-sm" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-black/75 mb-1">WhatsApp Number (digits only, e.g. 447700900412)</label>
+              <input id="cfg-whatsappNumber" type="text" class="w-full px-3 py-2 rounded-lg border border-black/15 text-sm font-mono" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-black/75 mb-1">Hero Headline / Tagline</label>
+            <input id="cfg-tagline" type="text" class="w-full px-3 py-2 rounded-lg border border-black/15 text-sm" />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-black/75 mb-1">Logo Mode</label>
+              <select id="cfg-logoType" onchange="toggleLogoInputMode()" class="w-full px-3 py-2 rounded-lg border border-black/15 text-sm">
+                <option value="monogram">Monogram Emblem</option>
+                <option value="image">Custom Logo Image URL</option>
+              </select>
+            </div>
+            <div id="cfg-monogram-wrap">
+              <label class="block text-xs font-bold text-black/75 mb-1">Monogram (2 Letters)</label>
+              <input id="cfg-monogram" type="text" maxlength="3" class="w-full px-3 py-2 rounded-lg border border-black/15 text-sm uppercase font-serif font-bold" />
+            </div>
+            <div id="cfg-logoUrl-wrap" class="hidden sm:col-span-2">
+              <label class="block text-xs font-bold text-black/75 mb-1">Logo Image URL</label>
+              <input id="cfg-logoUrl" type="url" placeholder="https://..." class="w-full px-3 py-2 rounded-lg border border-black/15 text-sm" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-black/75 mb-1">Contact Email</label>
+              <input id="cfg-email" type="email" class="w-full px-3 py-2 rounded-lg border border-black/15 text-sm" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-black/75 mb-1">Service Areas</label>
+            <input id="cfg-serviceAreas" type="text" class="w-full px-3 py-2 rounded-lg border border-black/15 text-sm" />
+          </div>
+
+          <!-- Accent Colour Swatches + Custom Picker -->
+          <div>
+            <label class="block text-xs font-bold text-black/75 mb-2">Brand Accent Colour</label>
+            <div class="flex flex-wrap items-center gap-2.5">
+              <button type="button" onclick="setBrandAccentPreview('#C69C6D')" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-black/15 text-xs font-semibold hover:border-black">
+                <span class="w-3.5 h-3.5 rounded-full" style="background:#C69C6D"></span> Warm Oak Gold
+              </button>
+              <button type="button" onclick="setBrandAccentPreview('#2E5A44')" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-black/15 text-xs font-semibold hover:border-black">
+                <span class="w-3.5 h-3.5 rounded-full" style="background:#2E5A44"></span> Heritage Forest
+              </button>
+              <button type="button" onclick="setBrandAccentPreview('#1E3A5F')" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-black/15 text-xs font-semibold hover:border-black">
+                <span class="w-3.5 h-3.5 rounded-full" style="background:#1E3A5F"></span> Midnight Navy
+              </button>
+              <button type="button" onclick="setBrandAccentPreview('#B86B4B')" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-black/15 text-xs font-semibold hover:border-black">
+                <span class="w-3.5 h-3.5 rounded-full" style="background:#B86B4B"></span> Slate Copper
+              </button>
+              <label class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg border border-black/15 text-xs font-semibold cursor-pointer">
+                <span>Custom:</span>
+                <input id="cfg-accentGold" type="color" class="w-6 h-6 border-0 bg-transparent cursor-pointer" />
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-black/75 mb-1">Brand Story Heading</label>
+            <input id="cfg-brandStoryTitle" type="text" class="w-full px-3 py-2 rounded-lg border border-black/15 text-sm" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-black/75 mb-1">Brand Story Narrative</label>
+            <textarea id="cfg-brandStoryBody" rows="3" class="w-full px-3 py-2 rounded-lg border border-black/15 text-sm"></textarea>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-black/10">
+            <button type="button" onclick="resetBrandConfig()" class="px-4 py-2.5 rounded-xl border border-black/15 text-xs font-semibold text-black/70 hover:text-brand-dark hover:border-brand-dark transition touch-btn">
+              Reset Default Brand
+            </button>
+            <button type="button" onclick="saveBrandCustomizations()" class="px-6 py-2.5 rounded-xl bg-brand-dark text-white text-xs sm:text-sm font-semibold hover:opacity-90 transition shadow-sm touch-btn">
+              Save &amp; Apply Brand
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION BANNER -->
+  <div id="toast-container" class="fixed bottom-20 md:bottom-6 right-4 left-4 md:left-auto md:max-w-sm z-50 pointer-events-none flex flex-col gap-2"></div>
+
+  <script>
+    /**
+     * =========================================================================
+     * 1. CENTRALIZED CLONE-READY BRAND CONFIGURATION (DEFAULT_BRAND_CONFIG)
+     * Clone this site for any UK Carpenter/Joiner in 60 seconds by editing here
+     * or using the PIN-protected Owner Desk (PIN: 2468).
+     * =========================================================================
+     */
+    const DEFAULT_BRAND_CONFIG = {
+      companyName: "Oak & Mortise Bespoke Joinery",
+      tagline: "Handcrafted Fitted Wardrobes, Media Walls & Architectural Joinery",
+      logoType: "monogram", // "monogram" or "image"
+      monogram: "OM",
+      logoUrl: "",
+      primaryDark: "#14171A",
+      accentGold: "#C69C6D",
+      surfaceLight: "#F8F6F2",
+      whatsappNumber: "447700900412",
+      email: "enquiries@oakandmortise.co.uk",
+      serviceAreas: "London, Surrey, Kent & Home Counties",
+      yearsExperience: "12+ Years Master Joinery",
+      guaranteeText: "10-Year Structural Craftsmanship Guarantee",
+      brandStoryTitle: "Why We Build From Scratch — Never Flat-Pack",
+      brandStoryBody: "Founded by workshop-trained cabinetmakers, we saw too many UK homeowners paying premium prices for mass-produced carcasses trimmed with filler strips. Every wardrobe, alcove unit, and media wall we build is scribed millimetre-tight to wonky period walls, spray-finished in our workshop, and installed cleanly with dust-extraction on site—leaving clients with furniture that looks like it was always part of the house.",
+      brandPillars: [
+        {
+          title: "Scribed To Your Walls",
+          desc: "Laser-measured and custom-scribed for Victorian, Edwardian & modern new-build tolerances."
+        },
+        {
+          title: "Workshop Spray Finish",
+          desc: "Durable trade-grade lacquer in any Farrow & Ball, Little Greene, or natural oak veneer."
+        },
+        {
+          title: "Dust-Free Home Fit",
+          desc: "Pre-built in our workshop so on-site installation takes 1–2 days with minimal disruption."
+        }
+      ],
+      reviews: [
+        {
+          name: "Claire & Tom H.",
+          location: "Blackheath, SE3",
+          project: "Floor-to-Ceiling Shaker Wardrobes",
+          rating: 5,
+          text: "Scribed into our uneven Victorian alcoves without a single gap. Worth every penny over high-street fitted companies."
+        },
+        {
+          name: "Marcus D.",
+          location: "Guildford, GU1",
+          project: "Acoustic Oak Media Wall & Floating Console",
+          rating: 5,
+          text: "Turned up on time, kept the living room spotless, and the hidden cable routing and warm LED finish look straight out of a magazine."
+        },
+        {
+          name: "Priya S.",
+          location: "Sevenoaks, TN13",
+          project: "Under-Stairs Pull-Out Storage & Boot Room",
+          rating: 5,
+          text: "Doubled our hallway storage overnight. Soft-close Blum runners feel rock solid."
+        }
+      ]
+    };
+
+    const STORAGE_KEYS = {
+      BRAND: "om_brand_config_v1",
+      ENQUIRIES: "om_enquiries_v1"
+    };
+
+    const OWNER_PIN = "2468";
+    let activeBrand = loadBrandConfig();
+
+    /**
+     * =========================================================================
+     * 2. ARCHITECTURAL JOINERY SVG ILLUSTRATIONS & PORTFOLIO DATA
+     * Crisp inline vector elevations so every project looks razor-sharp offline.
+     * =========================================================================
+     */
+    const JOINERY_SVGS = {
+      wardrobe: `
+        <svg viewBox="0 0 360 210" class="w-full h-44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="14" width="320" height="182" rx="3" fill="#FAF8F5" stroke="#14171A" stroke-width="1.5"/>
+          <!-- Cornice -->
+          <rect x="16" y="10" width="328" height="8" fill="#14171A"/>
+          <!-- 4 Shaker Doors -->
+          <g stroke="#14171A" stroke-width="1.2">
+            <rect x="26" y="22" width="74" height="162" fill="#EFECE6"/>
+            <rect x="34" y="30" width="58" height="86" fill="#F8F6F2"/>
+            <rect x="34" y="124" width="58" height="52" fill="#F8F6F2"/>
+
+            <rect x="104" y="22" width="74" height="162" fill="#EFECE6"/>
+            <rect x="112" y="30" width="58" height="86" fill="#F8F6F2"/>
+            <rect x="112" y="124" width="58" height="52" fill="#F8F6F2"/>
+
+            <rect x="182" y="22" width="74" height="162" fill="#EFECE6"/>
+            <rect x="190" y="30" width="58" height="86" fill="#F8F6F2"/>
+            <rect x="190" y="124" width="58" height="52" fill="#F8F6F2"/>
+
+            <rect x="260" y="22" width="74" height="162" fill="#EFECE6"/>
+            <rect x="268" y="30" width="58" height="86" fill="#F8F6F2"/>
+            <rect x="268" y="124" width="58" height="52" fill="#F8F6F2"/>
+          </g>
+          <!-- Brushed Brass Handles -->
+          <line x1="94" y1="96" x2="94" y2="122" stroke="var(--accent-gold)" stroke-width="3" stroke-linecap="round"/>
+          <line x1="110" y1="96" x2="110" y2="122" stroke="var(--accent-gold)" stroke-width="3" stroke-linecap="round"/>
+          <line x1="250" y1="96" x2="250" y2="122" stroke="var(--accent-gold)" stroke-width="3" stroke-linecap="round"/>
+          <line x1="266" y1="96" x2="266" y2="122" stroke="var(--accent-gold)" stroke-width="3" stroke-linecap="round"/>
+          <!-- Plinth -->
+          <rect x="20" y="186" width="320" height="10" fill="#14171A"/>
+          <!-- Dimension Callout -->
+          <text x="180" y="207" text-anchor="middle" font-size="9" fill="#14171A" opacity="0.55" font-family="monospace">SCRIBED FLOOR-TO-CEILING ELEVATION &bull; 2700MM</text>
+        </svg>`,
+
+      mediaWall: `
+        <svg viewBox="0 0 360 210" class="w-full h-44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="18" y="14" width="324" height="182" rx="3" fill="#FAF8F5" stroke="#14171A" stroke-width="1.5"/>
+          <!-- Acoustic Oak Slats Left & Right -->
+          <g fill="var(--accent-gold)" opacity="0.55">
+            <rect x="26" y="22" width="5" height="130"/><rect x="35" y="22" width="5" height="130"/>
+            <rect x="44" y="22" width="5" height="130"/><rect x="53" y="22" width="5" height="130"/>
+            <rect x="62" y="22" width="5" height="130"/><rect x="71" y="22" width="5" height="130"/>
+            <rect x="284" y="22" width="5" height="130"/><rect x="293" y="22" width="5" height="130"/>
+            <rect x="302" y="22" width="5" height="130"/><rect x="311" y="22" width="5" height="130"/>
+            <rect x="320" y="22" width="5" height="130"/><rect x="329" y="22" width="5" height="130"/>
+          </g>
+          <!-- Recessed TV Niche -->
+          <rect x="92" y="28" width="176" height="82" rx="2" fill="#14171A"/>
+          <rect x="100" y="34" width="160" height="70" fill="#23282E"/>
+          <!-- Linear Electric Fire -->
+          <rect x="106" y="122" width="148" height="24" rx="2" fill="#14171A"/>
+          <line x1="116" y1="135" x2="244" y2="135" stroke="var(--accent-gold)" stroke-width="3" stroke-linecap="round"/>
+          <!-- Floating Low Credenza -->
+          <rect x="26" y="156" width="308" height="26" fill="#EFECE6" stroke="#14171A" stroke-width="1.3"/>
+          <line x1="128" y1="156" x2="128" y2="182" stroke="#14171A" stroke-width="1.2"/>
+          <line x1="232" y1="156" x2="232" y2="182" stroke="#14171A" stroke-width="1.2"/>
+          <!-- Warm LED Under-Glow -->
+          <line x1="30" y1="185" x2="330" y2="185" stroke="var(--accent-gold)" stroke-width="2.5"/>
+          <text x="180" y="207" text-anchor="middle" font-size="9" fill="#14171A" opacity="0.55" font-family="monospace">SLATTED OAK &amp; CONCEALED CONDUIT MEDIA WALL</text>
+        </svg>`,
+
+      alcove: `
+        <svg viewBox="0 0 360 210" class="w-full h-44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Chimney Breast Center -->
+          <rect x="128" y="14" width="104" height="182" fill="#E6E1D8" stroke="#14171A" stroke-width="1.4"/>
+          <rect x="152" y="124" width="56" height="72" fill="#14171A"/>
+          <!-- Left Alcove Shelves & Base Cabinet -->
+          <rect x="22" y="14" width="106" height="182" fill="#FAF8F5" stroke="#14171A" stroke-width="1.4"/>
+          <line x1="22" y1="46" x2="128" y2="46" stroke="#14171A" stroke-width="3"/>
+          <line x1="22" y1="80" x2="128" y2="80" stroke="#14171A" stroke-width="3"/>
+          <line x1="22" y1="114" x2="128" y2="114" stroke="#14171A" stroke-width="3"/>
+          <rect x="26" y="132" width="48" height="58" fill="#EFECE6" stroke="#14171A" stroke-width="1.2"/>
+          <rect x="76" y="132" width="48" height="58" fill="#EFECE6" stroke="#14171A" stroke-width="1.2"/>
+          <!-- Right Alcove Shelves & Base Cabinet -->
+          <rect x="232" y="14" width="106" height="182" fill="#FAF8F5" stroke="#14171A" stroke-width="1.4"/>
+          <line x1="232" y1="46" x2="338" y2="46" stroke="#14171A" stroke-width="3"/>
+          <line x1="232" y1="80" x2="338" y2="80" stroke="#14171A" stroke-width="3"/>
+          <line x1="232" y1="114" x2="338" y2="114" stroke="#14171A" stroke-width="3"/>
+          <rect x="236" y="132" width="48" height="58" fill="#EFECE6" stroke="#14171A" stroke-width="1.2"/>
+          <rect x="286" y="132" width="48" height="58" fill="#EFECE6" stroke="#14171A" stroke-width="1.2"/>
+          <!-- Oak Countertops -->
+          <rect x="20" y="127" width="110" height="5" fill="var(--accent-gold)"/>
+          <rect x="230" y="127" width="110" height="5" fill="var(--accent-gold)"/>
+          <text x="180" y="207" text-anchor="middle" font-size="9" fill="#14171A" opacity="0.55" font-family="monospace">VICTORIAN CHIMNEY ALCOVE PAIR &bull; OAK TOPS</text>
+        </svg>`,
+
+      underStairs: `
+        <svg viewBox="0 0 360 210" class="w-full h-44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Diagonal Staircase Stringer -->
+          <polygon points="24,192 336,192 336,20" fill="#FAF8F5" stroke="#14171A" stroke-width="1.6"/>
+          <line x1="20" y1="192" x2="336" y2="18" stroke="#14171A" stroke-width="4"/>
+          <!-- Stepped Tall Pull-Out Doors -->
+          <polygon points="105,192 162,192 162,118 105,149" fill="#EFECE6" stroke="#14171A" stroke-width="1.2"/>
+          <polygon points="168,192 225,192 225,84 168,115" fill="#EFECE6" stroke="#14171A" stroke-width="1.2"/>
+          <polygon points="231,192 288,192 288,50 231,81" fill="#EFECE6" stroke="#14171A" stroke-width="1.2"/>
+          <polygon points="294,192 332,192 332,26 294,47" fill="#EFECE6" stroke="#14171A" stroke-width="1.2"/>
+          <!-- Brass Edge Pulls -->
+          <line x1="156" y1="145" x2="156" y2="165" stroke="var(--accent-gold)" stroke-width="2.5"/>
+          <line x1="219" y1="125" x2="219" y2="145" stroke="var(--accent-gold)" stroke-width="2.5"/>
+          <line x1="282" y1="105" x2="282" y2="125" stroke="var(--accent-gold)" stroke-width="2.5"/>
+          <text x="180" y="207" text-anchor="middle" font-size="9" fill="#14171A" opacity="0.55" font-family="monospace">PUSH-TO-OPEN &amp; PULL-OUT UNDER-STAIR CARRIAGES</text>
+        </svg>`,
+
+      kitchen: `
+        <svg viewBox="0 0 360 210" class="w-full h-44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="14" width="320" height="182" rx="3" fill="#FAF8F5" stroke="#14171A" stroke-width="1.5"/>
+          <!-- Tall Larder Left -->
+          <rect x="26" y="20" width="84" height="168" fill="#EFECE6" stroke="#14171A" stroke-width="1.3"/>
+          <rect x="33" y="27" width="70" height="92" fill="#F8F6F2" stroke="#14171A" stroke-width="1"/>
+          <rect x="33" y="125" width="70" height="56" fill="#F8F6F2" stroke="#14171A" stroke-width="1"/>
+          <!-- Upper Wall Cupboards -->
+          <rect x="116" y="20" width="218" height="52" fill="#EFECE6" stroke="#14171A" stroke-width="1.3"/>
+          <line x1="188" y1="20" x2="188" y2="72" stroke="#14171A" stroke-width="1.2"/>
+          <line x1="261" y1="20" x2="261" y2="72" stroke="#14171A" stroke-width="1.2"/>
+          <!-- Worktop -->
+          <rect x="112" y="116" width="224" height="6" fill="var(--accent-gold)"/>
+          <!-- Base Pan Drawers -->
+          <rect x="116" y="122" width="218" height="66" fill="#EFECE6" stroke="#14171A" stroke-width="1.3"/>
+          <line x1="116" y1="144" x2="334" y2="144" stroke="#14171A" stroke-width="1.2"/>
+          <line x1="116" y1="166" x2="334" y2="166" stroke="#14171A" stroke-width="1.2"/>
+          <line x1="225" y1="122" x2="225" y2="188" stroke="#14171A" stroke-width="1.2"/>
+          <text x="180" y="207" text-anchor="middle" font-size="9" fill="#14171A" opacity="0.55" font-family="monospace">IN-FRAME SHAKER LARDER &amp; DOVETAIL OAK DRAWERS</text>
+        </svg>`,
+
+      bootRoom: `
+        <svg viewBox="0 0 360 210" class="w-full h-44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="14" width="320" height="182" rx="3" fill="#FAF8F5" stroke="#14171A" stroke-width="1.5"/>
+          <!-- Tall Coat Locker -->
+          <rect x="26" y="20" width="76" height="168" fill="#EFECE6" stroke="#14171A" stroke-width="1.3"/>
+          <rect x="33" y="28" width="62" height="152" fill="#F8F6F2" stroke="#14171A" stroke-width="1"/>
+          <!-- Overhead Cubbies -->
+          <rect x="108" y="20" width="226" height="36" fill="#EFECE6" stroke="#14171A" stroke-width="1.3"/>
+          <line x1="183" y1="20" x2="183" y2="56" stroke="#14171A" stroke-width="1.2"/>
+          <line x1="258" y1="20" x2="258" y2="56" stroke="#14171A" stroke-width="1.2"/>
+          <!-- Tongue & Groove Back Panel + Coat Hooks -->
+          <line x1="145" y1="56" x2="145" y2="136" stroke="#14171A" stroke-opacity="0.25"/>
+          <line x1="183" y1="56" x2="183" y2="136" stroke="#14171A" stroke-opacity="0.25"/>
+          <line x1="221" y1="56" x2="221" y2="136" stroke="#14171A" stroke-opacity="0.25"/>
+          <line x1="258" y1="56" x2="258" y2="136" stroke="#14171A" stroke-opacity="0.25"/>
+          <line x1="296" y1="56" x2="296" y2="136" stroke="#14171A" stroke-opacity="0.25"/>
+          <circle cx="145" cy="84" r="3.5" fill="var(--accent-gold)"/>
+          <circle cx="221" cy="84" r="3.5" fill="var(--accent-gold)"/>
+          <circle cx="296" cy="84" r="3.5" fill="var(--accent-gold)"/>
+          <!-- Solid Oak Bench Seat & Shoe Drawers -->
+          <rect x="104" y="136" width="232" height="7" fill="var(--accent-gold)"/>
+          <rect x="108" y="143" width="226" height="45" fill="#EFECE6" stroke="#14171A" stroke-width="1.3"/>
+          <line x1="221" y1="143" x2="221" y2="188" stroke="#14171A" stroke-width="1.2"/>
+          <text x="180" y="207" text-anchor="middle" font-size="9" fill="#14171A" opacity="0.55" font-family="monospace">HALLWAY BOOT ROOM BENCH &amp; SOLID OAK SEAT</text>
+        </svg>`
+    };
+
+    const HERO_SHOWCASES = [
+      {
+        title: "Floor-to-Ceiling Shaker Wardrobes",
+        tag: "Most Requested",
+        price: "£2,450",
+        spec: "18mm moisture-resistant MDF & oak interiors, scribed cornice & plinth, Blum soft-close hinges, workshop colour-matched spray finish.",
+        lead: "Lead time: 3–4 wks workshop + 2 days fit",
+        svgKey: "wardrobe",
+        quoteProjectId: "wardrobes"
+      },
+      {
+        title: "Acoustic Oak Slatted Media Wall",
+        tag: "Living Room Focal Point",
+        price: "£2,850",
+        spec: "Real European oak acoustic slats, recessed TV & linear fireplace housing, hidden conduit routing, warm dimmable 2700K LED strips.",
+        lead: "Lead time: 3 wks workshop + 2 days fit",
+        svgKey: "mediaWall",
+        quoteProjectId: "media-wall"
+      },
+      {
+        title: "Victorian Chimney Alcove Pair",
+        tag: "Period Property Specialist",
+        price: "£1,950",
+        spec: "Scribed millimetre-tight to out-of-plumb period brickwork, 32mm solid oak countertops, shaker base cupboards & floating shelves.",
+        lead: "Lead time: 2–3 wks workshop + 1 day fit",
+        svgKey: "alcove",
+        quoteProjectId: "alcoves"
+      }
+    ];
+
+    const PORTFOLIO_ITEMS = [
+      {
+        id: "p1",
+        category: "Fitted Wardrobes",
+        quoteProjectId: "wardrobes",
+        title: "Floor-to-Ceiling Shaker Wardrobes",
+        location: "Blackheath, London SE3",
+        specs: "18mm MR-MDF, Blum soft-close hinges, double hanging rails, internal oak dovetail drawers & Farrow & Ball spray finish.",
+        leadTime: "3–4 Weeks Workshop + 2 Days Fit",
+        startingPrice: "£2,450",
+        svgKey: "wardrobe"
+      },
+      {
+        id: "p2",
+        category: "Media Walls",
+        quoteProjectId: "media-wall",
+        title: "Acoustic Oak Media Wall & Floating Console",
+        location: "Guildford, Surrey GU1",
+        specs: "Natural European oak veneer slats, concealed HDMI/power channels, recessed fire housing & warm 2700K LED perimeter lighting.",
+        leadTime: "3 Weeks Workshop + 2 Days Fit",
+        startingPrice: "£2,850",
+        svgKey: "mediaWall"
+      },
+      {
+        id: "p3",
+        category: "Alcoves & Libraries",
+        quoteProjectId: "alcoves",
+        title: "Twin Victorian Alcove Units & Library",
+        location: "Dulwich, London SE21",
+        specs: "Custom-scribed around original cornicing & skirting, 32mm oiled oak worktops, shaker base doors & concealed shelf brackets.",
+        leadTime: "2–3 Weeks Workshop + 1 Day Fit",
+        startingPrice: "£1,950",
+        svgKey: "alcove"
+      },
+      {
+        id: "p4",
+        category: "Under-Stairs & Boot Rooms",
+        quoteProjectId: "under-stairs",
+        title: "Under-Stairs Pull-Out Shoe & Coat Carriages",
+        location: "Sevenoaks, Kent TN13",
+        specs: "Heavy-duty 70kg Blum Movento full-extension runners, push-to-open bevelled doors & integrated wine/utility racking.",
+        leadTime: "3 Weeks Workshop + 1 Day Fit",
+        startingPrice: "£1,750",
+        svgKey: "underStairs"
+      },
+      {
+        id: "p5",
+        category: "Bespoke Kitchens",
+        quoteProjectId: "kitchen",
+        title: "In-Frame Shaker Breakfast Pantry & Larder",
+        location: "Wimbledon, London SW19",
+        specs: "Solid tulipwood face-frames, solid European oak spice racks, cold-shelf marble plinth & brass butt hinges.",
+        leadTime: "4–5 Weeks Workshop + 2 Days Fit",
+        startingPrice: "£3,400",
+        svgKey: "kitchen"
+      },
+      {
+        id: "p6",
+        category: "Under-Stairs & Boot Rooms",
+        quoteProjectId: "under-stairs",
+        title: "Hallway Boot Room Bench & Coat Lockers",
+        location: "Reigate, Surrey RH2",
+        specs: "40mm solid character oak bench seat, deep ventilated shoe drawers, tongue-and-groove panelling & solid brass hooks.",
+        leadTime: "3 Weeks Workshop + 1.5 Days Fit",
+        startingPrice: "£2,150",
+        svgKey: "bootRoom"
+      }
+    ];
+
+    /**
+     * =========================================================================
+     * 3. QUOTE BUILDER CONFIGURATION & REAL-TIME GBP PRICING ENGINE
+     * =========================================================================
+     */
+    const QUOTE_PROJECT_TYPES = [
+      { id: "wardrobes", label: "Fitted Wardrobes (Hinged / Sliding / Walk-In)", baseLow: 2100, baseHigh: 2600 },
+      { id: "media-wall", label: "Acoustic Slatted Media Wall", baseLow: 2300, baseHigh: 2850 },
+      { id: "alcoves", label: "Alcove Units & Bookcase", baseLow: 1650, baseHigh: 2100 },
+      { id: "under-stairs", label: "Under-Stairs Smart Storage / Boot Room", baseLow: 1550, baseHigh: 1950 },
+      { id: "kitchen", label: "Bespoke Kitchen / In-Frame Pantry", baseLow: 3100, baseHigh: 3900 },
+      { id: "custom", label: "Custom Architectural Joinery", baseLow: 1800, baseHigh: 2400 }
+    ];
+
+    const QUOTE_WIDTHS = [
+      { id: "w1", label: "Up to 1.5m", multiplier: 0.85 },
+      { id: "w2", label: "1.5m – 2.5m", multiplier: 1.0 },
+      { id: "w3", label: "2.5m – 4.0m", multiplier: 1.45 },
+      { id: "w4", label: "4.0m+ / Full Room", multiplier: 2.05 }
+    ];
+
+    const QUOTE_FINISHES = [
+      { id: "primed", label: "Primed Ready-to-Paint", sub: "Smooth trade primer, ready for decorator", multiplier: 0.9 },
+      { id: "spray", label: "Workshop Spray Finish (Any Colour)", sub: "Farrow & Ball / Little Greene colour-matched", multiplier: 1.0 },
+      { id: "oak", label: "Natural European Oak Veneer", sub: "Crown-cut oak with matte satin lacquer", multiplier: 1.15 },
+      { id: "fluted-led", label: "Fluted / Slatted Wood + LED Lighting", sub: "Architectural timber slats & warm 2700K LEDs", multiplier: 1.25 }
+    ];
+
+    let quoteState = {
+      projectId: "wardrobes",
+      widthId: "w2",
+      finishId: "spray",
+      refId: "OM-" + Math.floor(1000 + Math.random() * 9000)
+    };
+
+    let activePortfolioCategory = "All";
+    let activeHeroIndex = 0;
+
+    /**
+     * =========================================================================
+     * 4. BRAND CONFIG LOADER, CSS VARIABLE SYNC & DYNAMIC RENDERING
+     * =========================================================================
+     */
+    function loadBrandConfig() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEYS.BRAND);
+        if (saved) {
+          return { ...DEFAULT_BRAND_CONFIG, ...JSON.parse(saved) };
+        }
+      } catch (e) {
+        console.warn("Could not read brand config from localStorage:", e);
+      }
+      return { ...DEFAULT_BRAND_CONFIG };
+    }
+
+    function formatUKPhone(rawDigits) {
+      const digits = (rawDigits || "").replace(/\D/g, "");
+      if (digits.startsWith("44") && digits.length >= 12) {
+        return `+44 ${digits.slice(2, 6)} ${digits.slice(6)}`;
+      }
+      return digits ? `+${digits}` : "+44 7700 900412";
+    }
+
+    function buildLogoHTML(brand, size = "md") {
+      const dim = size === "sm" ? "w-9 h-9 text-sm" : "w-11 h-11 text-base";
+      if (brand.logoType === "image" && brand.logoUrl && brand.logoUrl.trim() !== "") {
+        return `<img src="${escapeHTML(brand.logoUrl.trim())}" alt="${escapeHTML(brand.companyName)}" onerror="this.style.display='none'" class="${dim} rounded-xl object-cover border border-black/15 bg-white" />`;
+      }
+      const initials = (brand.monogram || "OM").slice(0, 3).toUpperCase();
+      return `
+        <div class="${dim} rounded-xl bg-brand-dark border border-brand-accent/60 flex flex-col items-center justify-center relative shadow-xs select-none">
+          <svg class="w-3.5 h-3.5 text-brand-accent -mb-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 20V9a8 8 0 0116 0v11M9 20v-6h6v6"/>
+          </svg>
+          <span class="font-serif font-bold tracking-wider text-white leading-none text-xs">${escapeHTML(initials)}</span>
+        </div>
+      `;
+    }
+
+    function applyBrandConfig(brand) {
+      activeBrand = brand;
+
+      // Apply CSS Custom Properties
+      document.documentElement.style.setProperty("--primary-dark", brand.primaryDark || "#14171A");
+      document.documentElement.style.setProperty("--accent-gold", brand.accentGold || "#C69C6D");
+      document.documentElement.style.setProperty("--surface-light", brand.surfaceLight || "#F8F6F2");
+
+      // Update Page Title
+      document.title = `${brand.companyName} | Bespoke UK Joinery & Fitted Furniture`;
+
+      // Update Logos
+      const headerLogo = document.getElementById("header-logo-container");
+      const footerLogo = document.getElementById("footer-logo-container");
+      if (headerLogo) headerLogo.innerHTML = buildLogoHTML(brand, "md");
+      if (footerLogo) footerLogo.innerHTML = buildLogoHTML(brand, "md");
+
+      // Update all data-brand text bindings
+      const formattedPhone = formatUKPhone(brand.whatsappNumber);
+      document.querySelectorAll("[data-brand]").forEach((el) => {
+        const key = el.getAttribute("data-brand");
+        if (key === "formattedPhone") {
+          el.textContent = formattedPhone;
+        } else if (brand[key] !== undefined) {
+          el.textContent = brand[key];
+        }
+      });
+
+      // Update WhatsApp & Email hrefs
+      const waBase = `https://wa.me/${(brand.whatsappNumber || "447700900412").replace(/\D/g, "")}?text=${encodeURIComponent(`Hi ${brand.companyName}, I'd like to enquire about a bespoke carpentry project.`)}`;
+      ["top-phone-link", "header-whatsapp-badge", "hero-whatsapp-cta", "footer-phone-link", "mobile-whatsapp-bar"].forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) el.href = waBase;
+      });
+
+      ["top-email-link", "footer-email-link"].forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) el.href = `mailto:${brand.email}`;
+      });
+
+      // Render Brand Pillars
+      const pillarsContainer = document.getElementById("brand-pillars-container");
+      if (pillarsContainer && Array.isArray(brand.brandPillars)) {
+        pillarsContainer.innerHTML = brand.brandPillars.map((pillar, idx) => `
+          <div class="p-6 rounded-2xl bg-white/[0.04] border border-white/12 hover:border-brand-accent/60 transition">
+            <div class="flex items-start gap-4">
+              <div class="w-9 h-9 rounded-xl bg-brand-accent/15 border border-brand-accent/40 text-brand-accent font-serif font-bold text-lg flex items-center justify-center shrink-0">
+                0${idx + 1}
+              </div>
+              <div>
+                <h3 class="font-serif text-2xl font-bold text-white">${escapeHTML(pillar.title)}</h3>
+                <p class="text-sm text-white/70 mt-1.5 leading-relaxed">${escapeHTML(pillar.desc)}</p>
+              </div>
+            </div>
+          </div>
+        `).join("");
+      }
+
+      // Render Verified UK Reviews
+      const reviewsGrid = document.getElementById("reviews-grid");
+      if (reviewsGrid && Array.isArray(brand.reviews)) {
+        reviewsGrid.innerHTML = brand.reviews.map((rev) => `
+          <article class="bg-white rounded-2xl border border-black/10 p-6 flex flex-col justify-between shadow-2xs">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-amber-500 text-sm tracking-tight">${"&#9733;".repeat(rev.rating || 5)}</span>
+                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-brand-surface text-black/70 border border-black/8">Verified Client</span>
+              </div>
+              <p class="text-sm text-black/80 leading-relaxed italic">&ldquo;${escapeHTML(rev.text)}&rdquo;</p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-black/8">
+              <div class="font-bold text-sm text-brand-dark">${escapeHTML(rev.name)} &bull; <span class="font-normal text-black/60">${escapeHTML(rev.location)}</span></div>
+              <div class="text-xs font-medium text-brand-accent mt-0.5">${escapeHTML(rev.project)}</div>
+            </div>
+          </article>
+        `).join("");
+      }
+    }
+
+    /**
+     * =========================================================================
+     * 5. HERO SHOWCASE & PORTFOLIO EXPLORER LOGIC
+     * =========================================================================
+     */
+    function selectHeroShowcase(index) {
+      activeHeroIndex = index;
+      const item = HERO_SHOWCASES[index];
+      if (!item) return;
+
+      document.querySelectorAll(".hero-tab").forEach((btn, i) => {
+        if (i === index) {
+          btn.className = "hero-tab px-2.5 py-1 rounded text-xs font-semibold bg-brand-accent text-brand-dark transition";
+        } else {
+          btn.className = "hero-tab px-2.5 py-1 rounded text-xs font-semibold text-white/75 hover:text-white transition";
+        }
+      });
+
+      document.getElementById("hero-showcase-svg").innerHTML = JOINERY_SVGS[item.svgKey] || "";
+      document.getElementById("hero-showcase-tag").textContent = item.tag;
+      document.getElementById("hero-showcase-title").textContent = item.title;
+      document.getElementById("hero-showcase-price").textContent = item.price;
+      document.getElementById("hero-showcase-spec").textContent = item.spec;
+      document.getElementById("hero-showcase-lead").textContent = item.lead;
+    }
+
+    function quoteSimilarFromHero() {
+      const item = HERO_SHOWCASES[activeHeroIndex];
+      if (item) {
+        triggerQuoteSimilar(item.quoteProjectId, item.title);
+      }
+    }
+
+    function renderPortfolioFilters() {
+      const categories = ["All", "Fitted Wardrobes", "Media Walls", "Alcoves & Libraries", "Under-Stairs & Boot Rooms", "Bespoke Kitchens"];
+      const container = document.getElementById("portfolio-filters");
+      container.innerHTML = categories.map((cat) => {
+        const isActive = activePortfolioCategory === cat;
+        return `
+          <button type="button" onclick="setPortfolioFilter('${cat}')" class="shrink-0 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition touch-btn ${
+            isActive
+              ? "bg-brand-dark text-white shadow-xs"
+              : "bg-white text-brand-dark/75 border border-black/12 hover:border-brand-accent"
+          }">
+            ${cat}
+          </button>
+        `;
+      }).join("");
+    }
+
+    function setPortfolioFilter(category) {
+      activePortfolioCategory = category;
+      renderPortfolioFilters();
+      renderPortfolioGrid();
+    }
+
+    function renderPortfolioGrid() {
+      const filtered = activePortfolioCategory === "All"
+        ? PORTFOLIO_ITEMS
+        : PORTFOLIO_ITEMS.filter((item) => item.category === activePortfolioCategory);
+
+      const grid = document.getElementById("portfolio-grid");
+      grid.innerHTML = filtered.map((item) => `
+        <article class="joinery-card rounded-2xl overflow-hidden flex flex-col justify-between">
+          <div>
+            <!-- Architectural SVG Elevation -->
+            <div class="bg-[#F2EFE9] p-4 border-b border-black/8 relative">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-white/95 border border-black/10 text-[11px] font-bold text-brand-dark">
+                ${escapeHTML(item.category)}
+              </span>
+              ${JOINERY_SVGS[item.svgKey] || ""}
+            </div>
+
+            <div class="p-5 sm:p-6 space-y-3">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <div class="text-[11px] font-semibold text-black/50 uppercase tracking-wider">${escapeHTML(item.location)}</div>
+                  <h3 class="font-serif text-2xl font-bold text-brand-dark leading-tight mt-0.5">${escapeHTML(item.title)}</h3>
+                </div>
+                <div class="text-right shrink-0">
+                  <div class="text-[10px] uppercase font-bold text-black/50">From</div>
+                  <div class="font-serif text-2xl font-bold text-brand-dark">${escapeHTML(item.startingPrice)}</div>
+                </div>
+              </div>
+
+              <p class="text-xs sm:text-sm text-black/65 leading-relaxed">
+                ${escapeHTML(item.specs)}
+              </p>
+            </div>
+          </div>
+
+          <div class="px-5 sm:px-6 pb-5 pt-3 border-t border-black/8 flex items-center justify-between gap-3">
+            <span class="text-[11px] font-medium text-black/55">${escapeHTML(item.leadTime)}</span>
+            <button type="button" onclick="triggerQuoteSimilar('${item.quoteProjectId}', '${escapeHTML(item.title)}')" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-brand-surface hover:bg-brand-dark hover:text-white border border-black/15 text-xs font-bold text-brand-dark transition touch-btn">
+              <span>Quote Similar Build</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function triggerQuoteSimilar(projectId, title) {
+      quoteState.projectId = projectId;
+      renderQuoteBuilderOptions();
+      updateQuoteState();
+      const target = document.getElementById("quote-builder");
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      showToast(`Loaded "${title}" into your instant £ quote builder.`);
+    }
+
+    /**
+     * =========================================================================
+     * 6. INTERACTIVE QUOTE BUILDER & LIVE QUOTE SLIP ENGINE
+     * =========================================================================
+     */
+    function renderQuoteBuilderOptions() {
+      // Step 1: Project Types
+      const projContainer = document.getElementById("qb-project-types");
+      projContainer.innerHTML = QUOTE_PROJECT_TYPES.map((pt) => {
+        const selected = quoteState.projectId === pt.id;
+        return `
+          <button type="button" onclick="selectQuoteProject('${pt.id}')" class="text-left p-3.5 rounded-xl border transition touch-btn flex items-center justify-between gap-2 ${
+            selected
+              ? "bg-brand-dark text-white border-brand-dark shadow-xs"
+              : "bg-brand-surface/50 text-brand-dark border-black/12 hover:border-brand-accent"
+          }">
+            <span class="text-xs sm:text-sm font-semibold leading-snug">${escapeHTML(pt.label)}</span>
+            <span class="w-4 h-4 rounded-full border flex items-center justify-center shrink-0 ${
+              selected ? "border-brand-accent bg-brand-accent" : "border-black/25"
+            }">
+              ${selected ? '<span class="w-1.5 h-1.5 rounded-full bg-brand-dark"></span>' : ""}
+            </span>
+          </button>
+        `;
+      }).join("");
+
+      // Step 2: Widths
+      const widthContainer = document.getElementById("qb-widths");
+      widthContainer.innerHTML = QUOTE_WIDTHS.map((w) => {
+        const selected = quoteState.widthId === w.id;
+        return `
+          <button type="button" onclick="selectQuoteWidth('${w.id}')" class="p-3 rounded-xl border text-center transition touch-btn ${
+            selected
+              ? "bg-brand-dark text-white border-brand-dark font-bold"
+              : "bg-brand-surface/50 text-brand-dark border-black/12 hover:border-brand-accent font-semibold"
+          }">
+            <div class="text-xs sm:text-sm">${escapeHTML(w.label)}</div>
+          </button>
+        `;
+      }).join("");
+
+      // Step 3: Finishes
+      const finishContainer = document.getElementById("qb-finishes");
+      finishContainer.innerHTML = QUOTE_FINISHES.map((fin) => {
+        const selected = quoteState.finishId === fin.id;
+        return `
+          <button type="button" onclick="selectQuoteFinish('${fin.id}')" class="text-left p-3.5 rounded-xl border transition touch-btn ${
+            selected
+              ? "bg-brand-dark text-white border-brand-dark"
+              : "bg-brand-surface/50 text-brand-dark border-black/12 hover:border-brand-accent"
+          }">
+            <div class="text-xs sm:text-sm font-bold">${escapeHTML(fin.label)}</div>
+            <div class="text-[11px] mt-0.5 ${selected ? "text-white/70" : "text-black/55"}">${escapeHTML(fin.sub)}</div>
+          </button>
+        `;
+      }).join("");
+    }
+
+    function selectQuoteProject(id) {
+      quoteState.projectId = id;
+      renderQuoteBuilderOptions();
+      updateQuoteState();
+    }
+
+    function selectQuoteWidth(id) {
+      quoteState.widthId = id;
+      renderQuoteBuilderOptions();
+      updateQuoteState();
+    }
+
+    function selectQuoteFinish(id) {
+      quoteState.finishId = id;
+      renderQuoteBuilderOptions();
+      updateQuoteState();
+    }
+
+    function calculateEstimate() {
+      const proj = QUOTE_PROJECT_TYPES.find((p) => p.id === quoteState.projectId) || QUOTE_PROJECT_TYPES[0];
+      const width = QUOTE_WIDTHS.find((w) => w.id === quoteState.widthId) || QUOTE_WIDTHS[1];
+      const finish = QUOTE_FINISHES.find((f) => f.id === quoteState.finishId) || QUOTE_FINISHES[1];
+
+      const rawLow = proj.baseLow * width.multiplier * finish.multiplier;
+      const rawHigh = proj.baseHigh * width.multiplier * finish.multiplier;
+
+      // Round nicely to nearest £50
+      const low = Math.round(rawLow / 50) * 50;
+      const high = Math.round(rawHigh / 50) * 50;
+
+      return {
+        proj,
+        width,
+        finish,
+        low,
+        high,
+        formattedRange: `£${low.toLocaleString("en-GB")} – £${high.toLocaleString("en-GB")}`
+      };
+    }
+
+    function updateQuoteState() {
+      const est = calculateEstimate();
+      const nameVal = (document.getElementById("qb-name").value || "").trim();
+      const postcodeVal = (document.getElementById("qb-postcode").value || "").trim().toUpperCase();
+      const propertyVal = document.getElementById("qb-property").value;
+      const surveyVal = document.getElementById("qb-survey").value;
+      const notesVal = (document.getElementById("qb-notes").value || "").trim();
+
+      document.getElementById("slip-ref-id").textContent = `#${quoteState.refId}`;
+      document.getElementById("slip-price-range").textContent = est.formattedRange;
+      document.getElementById("slip-project").textContent = est.proj.label;
+      document.getElementById("slip-width").textContent = est.width.label;
+      document.getElementById("slip-finish").textContent = est.finish.label;
+      document.getElementById("slip-client").textContent = `${nameVal || "Homeowner"} • ${postcodeVal || "Postcode TBC"}`;
+      document.getElementById("slip-survey").textContent = `${propertyVal} • ${surveyVal}`;
+
+      const notesRow = document.getElementById("slip-notes-row");
+      if (notesVal) {
+        notesRow.classList.remove("hidden");
+        document.getElementById("slip-notes").textContent = notesVal;
+      } else {
+        notesRow.classList.add("hidden");
+      }
+    }
+
+    function buildFormattedQuoteText() {
+      const est = calculateEstimate();
+      const nameVal = (document.getElementById("qb-name").value || "").trim() || "Homeowner";
+      const postcodeVal = (document.getElementById("qb-postcode").value || "").trim().toUpperCase() || "Not specified";
+      const propertyVal = document.getElementById("qb-property").value;
+      const surveyVal = document.getElementById("qb-survey").value;
+      const notesVal = (document.getElementById("qb-notes").value || "").trim();
+
+      const lines = [
+        `*BESPOKE CARPENTRY QUOTE REQUEST (${quoteState.refId})*`,
+        `To: ${activeBrand.companyName}`,
+        `--------------------------------`,
+        `*Project:* ${est.proj.label}`,
+        `*Approx. Width:* ${est.width.label}`,
+        `*Finish:* ${est.finish.label}`,
+        `*Guide Estimate:* ${est.formattedRange}`,
+        `--------------------------------`,
+        `*Name:* ${nameVal}`,
+        `*UK Postcode:* ${postcodeVal}`,
+        `*Property:* ${propertyVal}`,
+        `*Survey Preference:* ${surveyVal}`
+      ];
+
+      if (notesVal) {
+        lines.push(`*Notes:* ${notesVal}`);
+      }
+
+      lines.push(`--------------------------------`);
+      lines.push(`Please let me know availability for a home measure survey.`);
+      return lines.join("\n");
+    }
+
+    function persistCurrentEnquiry() {
+      const est = calculateEstimate();
+      const nameVal = (document.getElementById("qb-name").value || "").trim() || "Website Enquirer";
+      const postcodeVal = (document.getElementById("qb-postcode").value || "").trim().toUpperCase() || "UK Postcode";
+      const propertyVal = document.getElementById("qb-property").value;
+      const surveyVal = document.getElementById("qb-survey").value;
+      const notesVal = (document.getElementById("qb-notes").value || "").trim();
+
+      const enquiry = {
+        id: quoteState.refId,
+        createdAt: new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" }),
+        name: nameVal,
+        postcode: postcodeVal,
+        property: propertyVal,
+        survey: surveyVal,
+        project: est.proj.label,
+        width: est.width.label,
+        finish: est.finish.label,
+        estimate: est.formattedRange,
+        notes: notesVal,
+        status: "New Enquiry"
+      };
+
+      const existing = loadEnquiries();
+      existing.unshift(enquiry);
+      localStorage.setItem(STORAGE_KEYS.ENQUIRIES, JSON.stringify(existing));
+
+      // Generate fresh ref ID for next quote
+      quoteState.refId = "OM-" + Math.floor(1000 + Math.random() * 9000);
+      updateQuoteState();
+      return enquiry;
+    }
+
+    function submitQuoteViaWhatsApp() {
+      const saved = persistCurrentEnquiry();
+      const message = buildFormattedQuoteText();
+      const phone = (activeBrand.whatsappNumber || "447700900412").replace(/\D/g, "");
+      const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+      showToast(`Quote #${saved.id} saved to Workshop Desk & opening WhatsApp...`);
+      window.open(waUrl, "_blank", "noopener");
+    }
+
+    function saveEnquiryOnly() {
+      const saved = persistCurrentEnquiry();
+      showToast(`Survey request #${saved.id} logged in Owner Desk!`);
+    }
+
+    function copyQuoteSlip() {
+      const text = buildFormattedQuoteText();
+      const tempArea = document.createElement("textarea");
+      tempArea.value = text;
+      tempArea.style.position = "fixed";
+      tempArea.style.opacity = "0";
+      document.body.appendChild(tempArea);
+      tempArea.select();
+      try {
+        document.execCommand("copy");
+        showToast("Quote slip copied to clipboard!");
+      } catch (err) {
+        showToast("Unable to copy automatically. Please select text manually.");
+      }
+      document.body.removeChild(tempArea);
+    }
+
+    /**
+     * =========================================================================
+     * 7. PIN-PROTECTED OWNER DESK & 1-CLICK BRAND CLONER
+     * =========================================================================
+     */
+    let enteredPin = "";
+    let ownerUnlocked = false;
+
+    function loadEnquiries() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEYS.ENQUIRIES);
+        if (raw) return JSON.parse(raw);
+      } catch (e) {}
+      return [];
+    }
+
+    function seedDemoEnquiries(force = false) {
+      const existing = loadEnquiries();
+      if (existing.length > 0 && !force) return;
+
+      const samples = [
+        {
+          id: "OM-7412",
+          createdAt: "Today",
+          name: "Eleanor Vance",
+          postcode: "SE22 8BA",
+          property: "Period / Victorian / Edwardian",
+          survey: "Saturday Morning / Afternoon",
+          project: "Fitted Wardrobes (Hinged / Sliding / Walk-In)",
+          width: "2.5m – 4.0m",
+          finish: "Workshop Spray Finish (Any Colour)",
+          estimate: "£3,050 – £3,750",
+          notes: "Master bedroom chimney breast + two alcoves, floor-to-ceiling shaker doors in Farrow & Ball Shaded White.",
+          status: "New Enquiry"
+        },
+        {
+          id: "OM-7389",
+          createdAt: "Yesterday",
+          name: "David & Hannah Patel",
+          postcode: "KT2 6PY",
+          property: "1930s–1980s Suburban",
+          survey: "Weekday Evening (5pm–7:30pm)",
+          project: "Acoustic Slatted Media Wall",
+          width: "2.5m – 4.0m",
+          finish: "Fluted / Slatted Wood + LED Lighting",
+          estimate: "£4,150 – £5,150",
+          notes: "65-inch OLED recess + 1.5m electric fire + floating oak drawer unit.",
+          status: "Site Measure Booked"
+        }
+      ];
+
+      localStorage.setItem(STORAGE_KEYS.ENQUIRIES, JSON.stringify(samples));
+      if (ownerUnlocked) {
+        renderOwnerEnquiries();
+        showToast("Sample UK carpentry leads restored.");
+      }
+    }
+
+    function openOwnerModal() {
+      const modal = document.getElementById("owner-modal");
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+
+      if (ownerUnlocked) {
+        showUnlockedDashboard();
+      } else {
+        enteredPin = "";
+        updatePinDots();
+        document.getElementById("pin-error").classList.add("hidden");
+        document.getElementById("owner-pin-screen").classList.remove("hidden");
+        document.getElementById("owner-dashboard").classList.add("hidden");
+      }
+    }
+
+    function closeOwnerModal() {
+      const modal = document.getElementById("owner-modal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    function lockOwnerDesk() {
+      ownerUnlocked = false;
+      enteredPin = "";
+      updatePinDots();
+      document.getElementById("owner-pin-screen").classList.remove("hidden");
+      document.getElementById("owner-dashboard").classList.add("hidden");
+    }
+
+    function pressPinDigit(digit) {
+      if (enteredPin.length >= 4) return;
+      enteredPin += digit;
+      updatePinDots();
+      if (enteredPin.length === 4) {
+        setTimeout(submitPin, 140);
+      }
+    }
+
+    function clearPin() {
+      enteredPin = "";
+      updatePinDots();
+      document.getElementById("pin-error").classList.add("hidden");
+    }
+
+    function updatePinDots() {
+      const dots = document.querySelectorAll("#pin-dots span");
+      dots.forEach((dot, i) => {
+        if (i < enteredPin.length) {
+          dot.classList.add("bg-brand-dark");
+        } else {
+          dot.classList.remove("bg-brand-dark");
+        }
+      });
+    }
+
+    function submitPin() {
+      if (enteredPin === OWNER_PIN) {
+        ownerUnlocked = true;
+        showUnlockedDashboard();
+      } else {
+        document.getElementById("pin-error").classList.remove("hidden");
+        enteredPin = "";
+        updatePinDots();
+      }
+    }
+
+    function showUnlockedDashboard() {
+      document.getElementById("owner-pin-screen").classList.add("hidden");
+      document.getElementById("owner-dashboard").classList.remove("hidden");
+      renderOwnerEnquiries();
+      populateBrandClonerForm();
+    }
+
+    function switchOwnerTab(tabName) {
+      const tabEnq = document.getElementById("owner-tab-enquiries");
+      const tabCloner = document.getElementById("owner-tab-cloner");
+      const btnEnq = document.getElementById("owner-tab-btn-enquiries");
+      const btnCloner = document.getElementById("owner-tab-btn-cloner");
+
+      if (tabName === "enquiries") {
+        tabEnq.classList.remove("hidden");
+        tabCloner.classList.add("hidden");
+        btnEnq.className = "px-4 py-3.5 text-xs sm:text-sm font-bold border-b-2 border-brand-dark text-brand-dark";
+        btnCloner.className = "px-4 py-3.5 text-xs sm:text-sm font-bold border-b-2 border-transparent text-black/55 hover:text-brand-dark";
+        renderOwnerEnquiries();
+      } else {
+        tabEnq.classList.add("hidden");
+        tabCloner.classList.remove("hidden");
+        btnCloner.className = "px-4 py-3.5 text-xs sm:text-sm font-bold border-b-2 border-brand-dark text-brand-dark";
+        btnEnq.className = "px-4 py-3.5 text-xs sm:text-sm font-bold border-b-2 border-transparent text-black/55 hover:text-brand-dark";
+        populateBrandClonerForm();
+      }
+    }
+
+    function renderOwnerEnquiries() {
+      const enquiries = loadEnquiries();
+      document.getElementById("enquiry-count-badge").textContent = enquiries.length;
+      const list = document.getElementById("owner-enquiries-list");
+
+      if (enquiries.length === 0) {
+        list.innerHTML = `<div class="text-center py-8 text-sm text-black/55">No quote requests logged yet. Submit one from the Quote Builder to see it here!</div>`;
+        return;
+      }
+
+      const statuses = ["New Enquiry", "Site Measure Booked", "Quoted", "Won"];
+
+      list.innerHTML = enquiries.map((item, idx) => {
+        const followUpMsg = `Hi ${item.name}, thanks for your bespoke joinery enquiry (#${item.id}) for ${item.project} in ${item.postcode}. Our guide estimate is ${item.estimate}. Would you like to book your laser measure survey for ${item.survey}? — ${activeBrand.companyName}`;
+        const waFollowUp = `https://wa.me/${(activeBrand.whatsappNumber || "447700900412").replace(/\D/g, "")}?text=${encodeURIComponent(followUpMsg)}`;
+
+        return `
+          <div class="p-4 rounded-xl border border-black/12 bg-brand-surface/40 space-y-3">
+            <div class="flex flex-wrap items-start justify-between gap-2">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="font-mono text-xs font-bold px-2 py-0.5 rounded bg-brand-dark text-white">#${escapeHTML(item.id)}</span>
+                  <span class="font-bold text-sm text-brand-dark">${escapeHTML(item.name)}</span>
+                  <span class="text-xs font-semibold px-2 py-0.5 rounded bg-white border border-black/10">${escapeHTML(item.postcode)}</span>
+                </div>
+                <div class="text-xs text-black/60 mt-1">${escapeHTML(item.project)} &bull; ${escapeHTML(item.width)} &bull; ${escapeHTML(item.finish)}</div>
+              </div>
+              <div class="text-right">
+                <div class="font-serif text-xl font-bold text-brand-dark">${escapeHTML(item.estimate)}</div>
+                <div class="text-[11px] text-black/50">${escapeHTML(item.createdAt)}</div>
+              </div>
+            </div>
+
+            ${item.notes ? `<div class="text-xs text-black/75 bg-white p-2.5 rounded-lg border border-black/8 italic">&ldquo;${escapeHTML(item.notes)}&rdquo;</div>` : ""}
+
+            <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-black/8">
+              <div class="flex items-center gap-2">
+                <label class="text-[11px] font-semibold text-black/60">Status:</label>
+                <select onchange="updateEnquiryStatus(${idx}, this.value)" class="px-2.5 py-1.5 rounded-lg border border-black/15 bg-white text-xs font-semibold text-brand-dark">
+                  ${statuses.map((st) => `<option value="${st}" ${item.status === st ? "selected" : ""}>${st}</option>`).join("")}
+                </select>
+              </div>
+              <div class="flex items-center gap-2">
+                <a href="${waFollowUp}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-dark text-white text-xs font-semibold hover:opacity-90 transition">
+                  <span>WhatsApp Follow-Up</span>
+                </a>
+                <button type="button" onclick="deleteEnquiry(${idx})" class="px-2.5 py-1.5 rounded-lg border border-black/12 text-xs text-black/55 hover:text-red-600 hover:border-red-300 transition">
+                  Remove
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function updateEnquiryStatus(index, newStatus) {
+      const list = loadEnquiries();
+      if (list[index]) {
+        list[index].status = newStatus;
+        localStorage.setItem(STORAGE_KEYS.ENQUIRIES, JSON.stringify(list));
+        showToast(`Updated #${list[index].id} to "${newStatus}"`);
+      }
+    }
+
+    function deleteEnquiry(index) {
+      const list = loadEnquiries();
+      list.splice(index, 1);
+      localStorage.setItem(STORAGE_KEYS.ENQUIRIES, JSON.stringify(list));
+      renderOwnerEnquiries();
+      showToast("Enquiry removed.");
+    }
+
+    /* Quick-Brand Customizer (Clone Mode) */
+    function populateBrandClonerForm() {
+      document.getElementById("cfg-companyName").value = activeBrand.companyName || "";
+      document.getElementById("cfg-whatsappNumber").value = activeBrand.whatsappNumber || "";
+      document.getElementById("cfg-tagline").value = activeBrand.tagline || "";
+      document.getElementById("cfg-logoType").value = activeBrand.logoType || "monogram";
+      document.getElementById("cfg-monogram").value = activeBrand.monogram || "OM";
+      document.getElementById("cfg-logoUrl").value = activeBrand.logoUrl || "";
+      document.getElementById("cfg-email").value = activeBrand.email || "";
+      document.getElementById("cfg-serviceAreas").value = activeBrand.serviceAreas || "";
+      document.getElementById("cfg-accentGold").value = activeBrand.accentGold || "#C69C6D";
+      document.getElementById("cfg-brandStoryTitle").value = activeBrand.brandStoryTitle || "";
+      document.getElementById("cfg-brandStoryBody").value = activeBrand.brandStoryBody || "";
+      toggleLogoInputMode();
+    }
+
+    function toggleLogoInputMode() {
+      const mode = document.getElementById("cfg-logoType").value;
+      const monoWrap = document.getElementById("cfg-monogram-wrap");
+      const urlWrap = document.getElementById("cfg-logoUrl-wrap");
+      if (mode === "image") {
+        monoWrap.classList.add("hidden");
+        urlWrap.classList.remove("hidden");
+      } else {
+        monoWrap.classList.remove("hidden");
+        urlWrap.classList.add("hidden");
+      }
+    }
+
+    function setBrandAccentPreview(hex) {
+      document.getElementById("cfg-accentGold").value = hex;
+      document.documentElement.style.setProperty("--accent-gold", hex);
+    }
+
+    function saveBrandCustomizations() {
+      const updated = {
+        ...activeBrand,
+        companyName: document.getElementById("cfg-companyName").value.trim() || DEFAULT_BRAND_CONFIG.companyName,
+        whatsappNumber: document.getElementById("cfg-whatsappNumber").value.replace(/\D/g, "") || DEFAULT_BRAND_CONFIG.whatsappNumber,
+        tagline: document.getElementById("cfg-tagline").value.trim() || DEFAULT_BRAND_CONFIG.tagline,
+        logoType: document.getElementById("cfg-logoType").value,
+        monogram: (document.getElementById("cfg-monogram").value.trim() || "OM").toUpperCase(),
+        logoUrl: document.getElementById("cfg-logoUrl").value.trim(),
+        email: document.getElementById("cfg-email").value.trim() || DEFAULT_BRAND_CONFIG.email,
+        serviceAreas: document.getElementById("cfg-serviceAreas").value.trim() || DEFAULT_BRAND_CONFIG.serviceAreas,
+        accentGold: document.getElementById("cfg-accentGold").value || DEFAULT_BRAND_CONFIG.accentGold,
+        brandStoryTitle: document.getElementById("cfg-brandStoryTitle").value.trim() || DEFAULT_BRAND_CONFIG.brandStoryTitle,
+        brandStoryBody: document.getElementById("cfg-brandStoryBody").value.trim() || DEFAULT_BRAND_CONFIG.brandStoryBody
+      };
+
+      localStorage.setItem(STORAGE_KEYS.BRAND, JSON.stringify(updated));
+      applyBrandConfig(updated);
+      showToast(`Brand updated to "${updated.companyName}"!`);
+    }
+
+    function resetBrandConfig() {
+      localStorage.removeItem(STORAGE_KEYS.BRAND);
+      applyBrandConfig({ ...DEFAULT_BRAND_CONFIG });
+      populateBrandClonerForm();
+      showToast("Reset to Oak & Mortise default brand.");
+    }
+
+    /**
+     * =========================================================================
+     * 8. UTILITIES & INITIALIZATION
+     * =========================================================================
+     */
+    function escapeHTML(str) {
+      return String(str || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function showToast(message) {
+      const container = document.getElementById("toast-container");
+      const toast = document.createElement("div");
+      toast.className = "pointer-events-auto bg-brand-dark text-white text-xs sm:text-sm font-medium px-4 py-3 rounded-xl shadow-xl border border-brand-accent/50 flex items-center gap-2.5 transition-all duration-300";
+      toast.innerHTML = `<span class="w-2 h-2 rounded-full bg-brand-accent shrink-0"></span><span>${escapeHTML(message)}</span>`;
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = "0";
+        toast.style.transform = "translateY(8px)";
+        setTimeout(() => toast.remove(), 300);
+      }, 3400);
+    }
+
+    // Keyboard support for PIN modal
+    document.addEventListener("keydown", (e) => {
+      const modal = document.getElementById("owner-modal");
+      if (modal.classList.contains("hidden")) return;
+      if (e.key === "Escape") closeOwnerModal();
+      if (!ownerUnlocked) {
+        if (/^[0-9]$/.test(e.key)) pressPinDigit(e.key);
+        if (e.key === "Backspace") clearPin();
+        if (e.key === "Enter") submitPin();
+      }
+    });
+
+    window.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+      seedDemoEnquiries(false);
+      applyBrandConfig(activeBrand);
+      selectHeroShowcase(0);
+      renderPortfolioFilters();
+      renderPortfolioGrid();
+      renderQuoteBuilderOptions();
+      updateQuoteState();
+    });
+  </script>
+</body>
+</html>
